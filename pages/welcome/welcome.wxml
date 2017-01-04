@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="head-wrapper">
+        <image class="head-avator" src="/images/avator.png"></image>
+    </view>
+    <text class="welcome-text">
+    Hello,蓝with黑
+    </text>
+    <view class="welcome-btn"><text class="btn-text">欢迎使用</text></view>
+</view>
