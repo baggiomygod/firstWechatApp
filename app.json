@@ -1,5 +1,6 @@
 {
 	"pages":[
-		"pages/demotest/demotest"
+		"pages/newspage/newspage",
+		"pages/welcome/welcome"
 	]
 }

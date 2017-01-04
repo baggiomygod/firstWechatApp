@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 120rpx;
 }
 .head-wrapper{
     margin-bottom: 200rpx;
@@ -15,7 +16,13 @@
     margin-bottom: 200rpx;
 }
 .welcome-btn{
+    height: 28px;
     border:1rpx solid rgba(7,17,27,0.3);
     border-radius:5rpx;
     padding: 10rpx;
 }
+.btn-text{
+    font-size: 28rpx;
+    line-height: 28px;
+}
+
