@@ -1,5 +1,5 @@
 page{
-    background-color: #33ffff;
+    background-color: #fff;
 }
 text{
     font-family: Arial, Helvetica, sans-serif

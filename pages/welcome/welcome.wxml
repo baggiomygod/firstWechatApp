@@ -5,5 +5,5 @@
     <text class="welcome-text">
     Hello,蓝with黑
     </text>
-    <view class="welcome-btn"><text class="btn-text">欢迎使用</text></view>
+    <view class="welcome-btn" bindtap="enterApp"><text class="btn-text">欢迎使用</text></view>
 </view>

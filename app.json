@@ -1,6 +1,9 @@
 {
 	"pages":[
-		"pages/newspage/newspage",
-		"pages/welcome/welcome"
-	]
+		"pages/welcome/welcome",
+		"pages/newspage/newspage"
+	],
+	"window":{
+		"navigationBarBackgroundColor":"#b3d4db"
+	}
 }
