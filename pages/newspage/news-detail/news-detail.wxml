@@ -1,0 +1,23 @@
+<view class="container">
+  <image class="image-top" src="{{musicPlay?newsData.music.coverImg:newsData.imgSrc}}"></image>
+  <image class="music-img" catchtap="onMusicTap" src="{{musicPlay?'/images/music/music-stop.png':'/images/music/music-start.png'}}"></image>
+  <view class="author">
+    <image class="author-avatar" src="{{newsData.avatar}}"></image>
+    <text class="author-name">{{newsData.author}}</text>
+    <text class="time">{{newsData.date}}</text>
+  </view>
+  <view class="title-wrapper">
+    <text class="title">{{newsData.title}}</text>
+  </view>
+  <view class="line-icon" >
+    <view class="icon-wrapper">
+      <image wx:if="{{collected}}" catchtap="setLocalOfCollection" class="icon-collection" src="/images/icon/collection.png"></image>
+      <image wx:else catchtap="setLocalOfCollection" class="icon-collection" src="/images/icon/collection-anti.png"></image>
+      <image catchtap="onShareTap" class="icon-share" src="/images/icon/share.png"></image>
+    </view>
+    <view class="line"></view>
+  </view>
+  <view class="artilce-content" >
+    <text>{{newsData.detail}}</text>
+  </view>
+</view>

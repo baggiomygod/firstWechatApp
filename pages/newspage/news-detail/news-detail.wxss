@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-top {
+  width: 100%;
+  height: 422rpx;
+}
+
+.music-img {
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  /*居中的一种方式left:50%;margin-left:宽度*/
+  left: 50%;
+  margin-left: -50rpx;
+  top: 140rpx;
+  opacity: 0.8;
+}
+
+.author {
+  width: 100%;
+  padding: 30rpx 30rpx 0 20rpx;
+  flex-direction: row;
+}
+
+.author .author-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.author .author-name {
+  font-size: 30rpx;
+  font-weight: 300;
+  margin-right: 28rpx;
+  color: #666;
+}
+
+.author .time {
+  font-size: 30rpx;
+  color: #666;
+  font-weight: 300;
+}
+
+.line-icon {
+  flex-direction: row;
+  padding: 0 30rpx;
+}
+
+.title-wrapper {
+  padding: 30rpx;
+}
+
+.title-wrapper .title {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.icon-wrapper {
+  float: right;
+  padding: 0 30rpx;
+}
+
+.line {
+  position: relative;
+  height: 2px;
+  width: 660rpx;
+  background-color: #eee;
+  top: 56rpx;
+  z-index: -99;
+  vertical-align: middle;
+}
+
+.icon-share, .icon-collection {
+  width: 90rpx;
+  height: 90rpx;
+  padding: 6px;
+}
+
+.icon-share {
+  margin-left: 20rpx;
+}
+
+.artilce-content {
+  padding: 20rpx 20rpx 0 30rpx;
+  color: #666;
+  line-height: 44rpx;
+}

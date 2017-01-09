@@ -1,0 +1,23 @@
+<import src="../movie-template/movie-template.wxml" />
+<template name="movieListTemplate">
+<view class="movie-list-container">
+    <view class="movie-head-container">
+        <text>top250</text>
+        <view>
+            <text>更多</text>
+            <image src="/images/icon/arrow-right.png"></image>
+        </view>
+    </view>
+    <view class="movie-tem-container">
+        <view class="movie-list-item">
+            <template is="movieTemplate" />
+        </view>
+         <view class="movie-list-item">
+            <template is="movieTemplate" />
+        </view>
+         <view class="movie-list-item">
+            <template is="movieTemplate" />
+        </view>
+    </view>
+</view>
+</template>

@@ -2,5 +2,6 @@ page{
     background-color: #fff;
 }
 text{
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28rpx;
 }
