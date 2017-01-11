@@ -1,1 +1,20 @@
 /* pages/movies/star-template/star-template.wxss */
+.stars-container{
+    display: flex;
+    flex-direction: row;
+}
+.stars-container .stars{
+    display: flex;
+    flex-direction: row;
+    margin-right: 12rpx;
+    margin-top: 3rpx;
+}
+.stars-container .stars image{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 6rpx;
+}
+
+.stars-container .score{
+    color: #1f3463;
+}

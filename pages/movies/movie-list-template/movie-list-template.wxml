@@ -1,23 +1,21 @@
 <import src="../movie-template/movie-template.wxml" />
 <template name="movieListTemplate">
-<view class="movie-list-container">
-    <view class="movie-head-container">
-        <text>top250</text>
-        <view>
-            <text>更多</text>
-            <image src="/images/icon/arrow-right.png"></image>
+  <view class="movie-list-container">
+    <view class="inner-container">
+      <view class="movie-header">
+        <text class="movie-classify">{{categoryTitle}}</text>
+        <view class="movie-more">
+          <text>更多</text>
+          <image src="/images/icon/arrow-right.png"></image>
         </view>
-    </view>
-    <view class="movie-tem-container">
+      </view>
+      <view class="movie-item-container">
+      <block wx:for="{{movies}}" wx:for-item="movie">
         <view class="movie-list-item">
-            <template is="movieTemplate" />
+          <template is="movieTemplate"  data="{{...movie}}" />
         </view>
-         <view class="movie-list-item">
-            <template is="movieTemplate" />
-        </view>
-         <view class="movie-list-item">
-            <template is="movieTemplate" />
-        </view>
+      </block>
+      </view>
     </view>
-</view>
+  </view>
 </template>

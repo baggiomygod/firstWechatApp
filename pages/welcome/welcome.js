@@ -1,10 +1,10 @@
 Page({
-    enterApp:function(){
+    enterApp(){
         wx.switchTab({
           url: '/pages/newspage/newspage'
         });
     },
-    onLoad:function(){
+    onLoad(){
         setTimeout(() => {
             // wx.redirectTo
             // wx.navigateTo
