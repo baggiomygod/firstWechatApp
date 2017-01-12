@@ -4,8 +4,8 @@ Page({
     data: {
         musicPlay: false
     },
-    onLoad: function (option) {
-        let newsId = option.newsId;
+    onLoad: function (options) {
+        let newsId = options.newsId;
         let g_isPlayingMusic = app.globalData.g_isPlayingMusic;
         let g_currentMusicNewsId = app.globalData.g_currentMusicNewsId;
         this.setData({

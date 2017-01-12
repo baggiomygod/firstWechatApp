@@ -2,20 +2,21 @@ var app = getApp();
 import util from '../../util/util.js';
 Page({
     data: {
-        hotMovies: {},
+        inTheaters: {},
         comingSoon: {},
-        top250: {}
+        top250: {},
+        moviesArray:[]
     },
     onLoad() {
         let doubanMovieBaseUrl = app.globalData.doubanBaseUrl + '/v2/movie';
-        let hotMoviesUrl = doubanMovieBaseUrl + '/in_theaters' + '?start=0&count=3';
+        let inTheatersUrl = doubanMovieBaseUrl + '/in_theaters' + '?start=0&count=3';
         let comingSoonUrl = doubanMovieBaseUrl + '/coming_soon' + '?start=0&count=3';
         let top250Url = doubanMovieBaseUrl + '/top250' + '?start=0&count=3';
-        this.getMoviesDataList(hotMoviesUrl, "", "get", 'hotMovies', '正在热映');
-        this.getMoviesDataList(comingSoonUrl, "", "get", 'comingSoon', '即将上映');
-        this.getMoviesDataList(top250Url, "", "get", 'top250', 'top250');
+        this.getMoviesDataList(inTheatersUrl, "", "get", 'inTheaters', '正在热映', '/in_theaters');
+        this.getMoviesDataList(comingSoonUrl, "", "get", 'comingSoon', '即将上映', '/coming_soon');
+        this.getMoviesDataList(top250Url, "", "get", 'top250', 'top250', '/top250');
     },
-    getMoviesDataList(url, data, method, settedKey, categoryTitle) {
+    getMoviesDataList(url, data, method, settedKey, categoryTitle, moreMoviesUrl) {
         let that = this;
         wx.request({
             url: url,
@@ -25,18 +26,16 @@ Page({
             },
             method: method,
             success(res) {
-                that.filterDoubanMovies(res.data, settedKey, categoryTitle);
+                that.filterDoubanMovies(res.data, settedKey, categoryTitle,moreMoviesUrl);
             },
             fail(err) {
                 console.log(err);
             }
         });
     },
-    filterDoubanMovies(data, settedKey, categoryTitle) {
-        let moviesArray = []
+    filterDoubanMovies(data, settedKey, categoryTitle, moreMoviesUrl) {
+        let moviesArray = [];
         for (let subject of data.subjects) {
-            let starArr=[];
-
             let temp = {
                 imgMedium: subject.images.medium,
                 title: subject.title.substring(0, 6),
@@ -44,9 +43,12 @@ Page({
                 ratingAverage: subject.rating.average,
                 stars: util.scoreToStarsArr(subject.rating.stars)
             };
-            
+
             moviesArray.push(temp);
         }
+        this.setData({
+            moviesArray:moviesArray
+        });
         /*
          {Ï
             inTheaters: {},
@@ -57,16 +59,14 @@ Page({
         let readyData = {};
         readyData[settedKey] = {
             categoryTitle: categoryTitle,
-            movies: moviesArray
+            movies: moviesArray,
+            moreMoviesUrl: moreMoviesUrl
         };
         this.setData(readyData);
     },
-    onReady(){
-        console.log("ready");
-        console.log(this.data);
-    },
-    onShow(){
-        console.log('show');
-        console.log(this.data);
+    openMareMvies(event) {
+        wx.navigateTo({
+            url: 'movies-grid/movies-grid?category=' + event.currentTarget.dataset.moviesType
+        });
     }
 });

@@ -4,6 +4,7 @@
 		"pages/newspage/newspage",
 		"pages/newspage/news-detail/news-detail",
 		"pages/movies/movies",
+		"pages/movies/movies-grid/movies-grid",
 		"pages/shopStores/shopStore",
 		"pages/user/user"
 	],

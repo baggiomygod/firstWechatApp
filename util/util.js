@@ -12,7 +12,23 @@ function scoreToStarsArr(score){
     return arr;
 
 }
-
+function http(url,data,method,callback){
+      wx.request({
+            url: url,
+            data: data,
+            header: {
+                "Content-Type": "json"
+            },
+            method: method,
+            success(res) {
+               callback(res.data);
+            },
+            fail(err) {
+                console.log(err);
+            }
+        });
+}
 module.exports={
-   scoreToStarsArr:scoreToStarsArr 
+   scoreToStarsArr:scoreToStarsArr,
+   http:http
 }
