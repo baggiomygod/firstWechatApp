@@ -5,12 +5,14 @@
 		"pages/newspage/news-detail/news-detail",
 		"pages/movies/movies",
 		"pages/movies/movies-grid/movies-grid",
+		"pages/movies/movie-detail/movie-detail",
 		"pages/shopStores/shopStore",
 		"pages/user/user"
 	],
 	"window":{
 		"navigationBarBackgroundColor":"#98C3E5",
-		"navigationBarTextStyle":"#fff"
+		"navigationBarTextStyle":"#fff",
+		"backgroundColor":"#eee"
 	},
 	"tabBar":{
 		"borderStyle":"white",

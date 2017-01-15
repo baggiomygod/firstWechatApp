@@ -1,0 +1,56 @@
+<import src="../star-template/star-template.wxml" />
+<view class="detail-container">
+  <view class="movie-header">
+    <image class="header-bgimg" src="{{movieDetail.images.large}}" mode="aspectFill"></image>
+    <view class="movie-briefly">
+      <text class="title">{{movieDetail.title}}</text>
+      <text class="production-time">{{movieDetail.countries}}•{{movieDetail.year}}</text>
+      <view class="like-rating">
+        <text class="count">{{movieDetail.collect_count}}</text>
+        <text>人喜欢</text>
+        <text class="count">{{movieDetail.comments_count}}</text>
+        <text>条评价</text>
+      </view>
+    </view>
+    <image class="avatar" mode="widthFix" src="{{movieDetail.images.small}}"></image>
+  </view>
+  <view class="movie-info">
+    <text class="all-name">{{movieDetail.title}}</text>
+    <view class="row-info">
+      <text>评分</text>
+      <view class="stars">
+        <template is="starsTemplate" data="{{stars:stars,ratingAverage:average}}" />
+      </view>
+    </view>
+    <view class="row-info">
+      <text>导演</text>
+      <text>{{movieDetail.directors[0].name}}</text>
+    </view>
+    <view class="row-info">
+      <text>影人</text>
+      <block wx:for="{{movieDetail.casts}}" wx:for-index="idx" wx:for-item="cast">
+        <text wx:if="{{movieDetail.casts.length-1===idx}}">{{cast.name}}</text>
+        <text wx:else>{{cast.name}}/</text>
+      </block>
+    </view>
+    <view class="row-info">
+      <text>类型</text>
+      <block wx:for="{{movieDetail.genres}}" wx:for-item="genre" wx:for-index="idx">
+        <text wx:if="{{idx==movieDetail.genres.length-1}}">{{genre}}</text>
+        <text wx:else>{{genre}}/</text>
+      </block>
+    </view>
+  </view>
+  <view class="info-list synopsis">
+    <text class="info-title">剧情简介</text>
+    <text class="sy-article">{{movieDetail.summary}}</text>
+  </view>
+  <view class="info-list actors">
+    <text class="info-title">影人</text>
+    <scroll-view class="actors-img" scroll-x="true">
+      <block wx:for="{{movieDetail.casts}}" wx:for-item="cast">
+        <image src="{{cast.avatars.medium}}"></image>
+      </block>
+    </scroll-view>
+  </view>
+</view>

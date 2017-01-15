@@ -3,7 +3,7 @@
   height: 1300rpx;
   margin: 40rpx 0 40rpx 6rpx;
 }
-.movie-grid-item {
+.movie-grid-container .movie-grid-item {
   float: left;
   margin-bottom: 40rpx;
 }

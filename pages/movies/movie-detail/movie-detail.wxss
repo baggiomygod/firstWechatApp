@@ -1,0 +1,116 @@
+/* pages/movies/movies-detail/movies-detail.wxss */
+@import "../star-template/star-template.wxss";
+.detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-container .movie-header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.detail-container .movie-header .header-bgimg {
+  width: 100%;
+  height: 330rpx;
+}
+
+.detail-container .movie-briefly {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 40rpx;
+  top: 80rpx;
+}
+
+.detail-container .movie-briefly text {
+  color: #fff;
+}
+
+.detail-container .movie-header .movie-briefly .production-time {
+  margin-bottom: 50rpx;
+}
+
+.detail-container .movie-header .movie-briefly .title {
+  font-size: 56rpx;
+  margin-bottom: 30rpx;
+}
+
+.detail-container .movie-header .movie-briefly .like-rating {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail-container .movie-header .movie-briefly .like-rating text {
+  margin-right: 30rpx;
+  color: #666;
+}
+
+.detail-container .movie-header .movie-briefly .like-rating .count {
+  margin-right: 20rpx;
+  color: #f33;
+}
+
+.detail-container .movie-header .avatar {
+  position: absolute;
+  bottom: -60rpx;
+  right: 30rpx;
+  width: 130rpx;
+  height: 200rpx;
+}
+
+.detail-container .movie-info {
+  padding: 40rpx;
+  border-bottom: 1rpx solid rgba(7, 17, 27, 0.3);
+}
+
+.detail-container .movie-info .all-name {
+  font-weight: 700;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.detail-container .movie-info .row-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.detail-container .movie-info .row-info text {
+  margin-right: 20rpx;
+  white-space: nowrap;
+}
+.detail-container .movie-info .row-info:last-child{
+    width: 500rpx;
+}
+
+.detail-container .info-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+  border-bottom: 1rpx solid rgba(7, 17, 27, 0.3);
+}
+
+.detail-container .info-list .info-title {
+  font-weight: 600;
+  margin-bottom: 20rpx;
+  color: rgba(7, 17, 27, 0.3);
+}
+
+.detail-container .synopsis .sy-article {
+  line-height: 40rpx;
+}
+
+.detail-container .info-list .actors-img {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.detail-container .info-list .actors-img image {
+  width: 170rpx;
+  height: 210rpx;
+  margin-right: 10rpx;
+}

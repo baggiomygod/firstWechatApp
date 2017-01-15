@@ -1,6 +1,6 @@
 <import src="../star-template/star-template.wxml" />
 <template name="movieTemplate" >
-    <view class="movice-container">
+    <view class="movice-container" catchtap="gotoDetail" data-movie-id="{{id}}" data-movie-name="{{title}}">
             <image class="movie-img" src="{{imgMedium}}"></image>
             <text class="movie-name">{{title}}</text>
             <template is="starsTemplate" data="{{stars:stars,ratingAverage:ratingAverage}}" />
