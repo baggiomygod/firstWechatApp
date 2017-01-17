@@ -6,7 +6,7 @@
         <text class="movie-classify">{{categoryTitle}}</text>
         <view class="movie-more" catchtap="openMareMvies" data-movies-type="{{moreMoviesUrl}}" >
           <text>更多</text>
-          <image src="/images/icon/arrow-right.png"></image>
+          <image src="http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/icon/arrow-right.png"></image>
         </view>
       </view>
       <view class="movie-item-container">

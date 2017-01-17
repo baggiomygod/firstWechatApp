@@ -9,8 +9,8 @@ Page({
             // wx.redirectTo
             // wx.navigateTo
           wx.switchTab({
-            // url: '/pages/newspage/newspage',
-            url: '/pages/movies/movies',
+            url: '/pages/newspage/newspage',
+            // url: '/pages/movies/movies',
             success:function(){
             },
             fail:function(){

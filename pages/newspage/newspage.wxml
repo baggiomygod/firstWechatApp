@@ -1,20 +1,17 @@
 <import src="news-item-template/news-item-template.wxml" />
 <view class="container">
+
     <!--indicator-dots:点；autoplay:自动轮播；inintercal:间隔时间；duration:持续时间；circular:是否衔接滑动；vertical:是否垂直滑动-->
-    <swiper catchtap="gotoDetailFromSwiper" class="swiper-warpper" indicator-dots="true" autoplay="true" interval="3000" duration="800" circular="true">
-        <swiper-item class="swiper-item">
-            <image data-news-id="0"  class="swiper-img" src="/images/xizang1.jpeg" ></image>
-        </swiper-item>
-        <swiper-item class="swiper-item">
-            <image data-news-id="1" class="swiper-img" src="/images/xizang2.jpeg"></image>
-        </swiper-item>
-        <swiper-item class="swiper-item">
-            <image data-news-id="2" class="swiper-img" src="/images/xizang3.jpeg"></image>
-        </swiper-item>
-    </swiper>
-    <block wx:for="{{newsArr_key}}" wx:for-item="news">
-        <view  catchtap="gotoDetail" data-news-id="{{news.postId}}">
-            <template is="newsItem" data="{{...news}}" />
-        </view>
-    </block>
+<swiper catchtap="gotoDetailFromSwiper" class="swiper-warpper" indicator-dots="true" autoplay="true" interval="3000" duration="800" circular="true">
+  <block wx:for="{{banners}}" wx:for-item="banner">
+    <swiper-item class="swiper-item">
+      <image data-news-id="{{banner.id}}" class="swiper-img" src="{{banner.url}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<block wx:for="{{newsArr_key}}" wx:for-item="news">
+  <view catchtap="gotoDetail" data-news-id="{{news.postId}}">
+    <template is="newsItem" data="{{...news}}" />
+  </view>
+</block>
 </view>

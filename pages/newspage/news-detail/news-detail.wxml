@@ -1,6 +1,6 @@
 <view class="container">
   <image class="image-top" src="{{musicPlay?newsData.music.coverImg:newsData.imgSrc}}"></image>
-  <image class="music-img" catchtap="onMusicTap" src="{{musicPlay?'/images/music/music-stop.png':'/images/music/music-start.png'}}"></image>
+  <image class="music-img" catchtap="onMusicTap" src="{{musicPlay?'http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/music/music-stop.png':'http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/music/music-start.png'}}"></image>
   <view class="author">
     <image class="author-avatar" src="{{newsData.avatar}}"></image>
     <text class="author-name">{{newsData.author}}</text>
@@ -11,9 +11,9 @@
   </view>
   <view class="line-icon" >
     <view class="icon-wrapper">
-      <image wx:if="{{collected}}" catchtap="setLocalOfCollection" class="icon-collection" src="/images/icon/collection.png"></image>
-      <image wx:else catchtap="setLocalOfCollection" class="icon-collection" src="/images/icon/collection-anti.png"></image>
-      <image catchtap="onShareTap" class="icon-share" src="/images/icon/share.png"></image>
+      <image wx:if="{{collected}}" catchtap="setLocalOfCollection" class="icon-collection" src="http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/icon/collection.png"></image>
+      <image wx:else catchtap="setLocalOfCollection" class="icon-collection" src="http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/icon/collection-anti.png"></image>
+      <image catchtap="onShareTap" class="icon-share" src="http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/icon/share.png"></image>
     </view>
     <view class="line"></view>
   </view>

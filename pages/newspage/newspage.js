@@ -4,7 +4,8 @@ Page({
     },
     onLoad() {
         this.setData({
-            newsArr_key: localData.dataList
+            newsArr_key: localData.dataList,
+            banners:localData.bannersList
         });
     },
     gotoDetail(event) {

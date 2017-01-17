@@ -1,6 +1,6 @@
 <view class="container">
     <view class="head-wrapper">
-        <image class="head-avator" src="/images/avator.png"></image>
+        <image class="head-avator" src="http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/avatar/roby.jpeg"></image>
     </view>
     <text class="welcome-text">
     Hello,蓝with黑

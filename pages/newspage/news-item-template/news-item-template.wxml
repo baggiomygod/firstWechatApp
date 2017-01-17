@@ -8,9 +8,9 @@
         <image class="content-img" src="{{imgSrc}}"></image>
         <text class="content-brief">{{content}}</text>
         <view class="content-icon"> 
-            <image class="icon" src="/images/icon/chat.png"></image>
+            <image class="icon" src="http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/icon/chat.png"></image>
             <text class="text">{{collection}}</text>
-            <image class="icon" src="/images/icon/view.png"></image>
+            <image class="icon" src="http://wxapp-resource.oss-cn-shanghai.aliyuncs.com/icon/view.png"></image>
             <text class="text">{{reading}}</text>
         </view>
     </view>
